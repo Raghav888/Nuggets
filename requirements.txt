@@ -9,3 +9,4 @@ scikit-learn
 matplotlib
 datetime
 pandas_datareader
+cvxopt
