@@ -105,8 +105,8 @@ def price():
       
     # import Image from pillow to open images
     
-    img = Image.open(r"C:/Users/Hp/nuggets/title.png")
-    #img = Image.open(r"title.png")  
+    #img = Image.open(r"C:/Users/Hp/nuggets/title.png")
+    img = Image.open(r"title.png")  
     st.image(img, width=200)
     total_portfolio_value = int(st.text_input("Amount to Invest", 0))
     sector_name = st.selectbox("Sector Wise Stocks: ",
