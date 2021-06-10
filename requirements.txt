@@ -1,0 +1,12 @@
+streamlit
+PyPortfolioOpt
+nsetools
+yfinance
+numpy
+pandas
+tensorflow
+scikit-learn
+matplotlib
+datetime
+pandas_datareader
+math
