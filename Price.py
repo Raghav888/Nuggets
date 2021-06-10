@@ -25,8 +25,8 @@ def price():
       
     # import Image from pillow to open images
     from PIL import Image
-    img = Image.open(r"C:/Users/Hp/nuggets/title.png")
-    #img = Image.open(r"title.png")  
+    #img = Image.open(r"C:/Users/Hp/nuggets/title.png")
+    img = Image.open(r"title.png")  
     # display image using streamlit
     # width is used to set the width of an image
     st.image(img, width=200)
