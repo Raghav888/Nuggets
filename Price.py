@@ -12,7 +12,7 @@ from math import sqrt
 import datetime
 import tensorflow
 from sklearn.metrics import mean_squared_error, mean_absolute_error
-
+import yfinance as yf
 def price():
     # Title
     global look_back
@@ -49,7 +49,9 @@ def price():
     
     if(st.button('Predict price')):            
             # Load data from yahoo 
-            df = pdr.DataReader(stock_symbol, data_source='yahoo',start=str(start_date),end=str(end_date))
+            stock=yf.Ticker(stock_symbol)
+            df = stock.history(start=str(start_date),end=str(end_date))
+          
             
             lst = ['High', 'Low', 'Open', 'Close']
 
