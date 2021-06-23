@@ -107,8 +107,8 @@ def plot_loss_graph(history):
 def plot_prediction_graph(model, testX, testY):
   yhat = model.predict(testX)
   fig, ax = plt.subplots(figsize=(8, 4))
-  ax.plot(yhat, label='predict')
-  ax.plot(testY, label='true')
+  ax.plot(yhat, label='Predict')
+  ax.plot(testY, label='True')
   plt.yticks(fontsize=5)
   plt.xticks(fontsize=5)
   ax.legend(prop={"size":5})
