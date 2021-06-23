@@ -35,7 +35,7 @@ def price():
     stock_symbol = str(st.text_input("Stock Symbol(ticker)"))
     st.write("Historical data to be loaded:")   
     today = datetime.date.today()
-    yesterday = today - datetime.timedelta(days = 100)
+    yesterday = today - datetime.timedelta(days = 1000)
     start_date = st.date_input('Start date', yesterday)
     end_date = st.date_input('End date', today)
     if start_date < end_date:
@@ -106,7 +106,7 @@ def plot_loss_graph(history):
   
 def plot_prediction_graph(model, testX, testY):
   yhat = model.predict(testX)
-  fig, ax = plt.subplots(figsize=(5, 2))
+  fig, ax = plt.subplots(figsize=(8, 4))
   ax.plot(yhat, label='predict')
   ax.plot(testY, label='true')
   plt.yticks(fontsize=5)
