@@ -8,6 +8,7 @@ from tensorflow.keras.layers import Dense, LSTM, GRU , Dropout, Flatten , Conv1D
 import matplotlib.pyplot as plt
 from datetime import date
 import pandas_datareader as pdr
+from tensorflow.keras.optimizers import Adam
 from math import sqrt
 import datetime
 import tensorflow
@@ -85,7 +86,7 @@ def price():
               st.write("---------------------------------------------------------------")
     
 def train_model(model, trainX, trainY, testX, testY):
-  model.compile(loss='mse', optimizer='adam')
+  model.compile(loss='mse', optimizer=Adam(lr=0.0001))
   # Training the model
   history = model.fit(trainX, trainY, epochs= 100, batch_size=256, validation_data=(testX, testY), verbose=False, shuffle=False)
   return history
